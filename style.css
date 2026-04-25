@@ -1,20 +1,57 @@
+:root {
+    --primary-purple: #6c5ce7;
+    --dark-bg: #1a1a1a;
+    --text-light: #f4f4f4;
+}
+
 body {
-  background: #111;
-  color: white;
-  font-family: Arial;
-  text-align: center;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    color: #333;
 }
 
-a {
-  color: #00ffff;
-  text-decoration: none;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--dark-bg);
+    color: white;
 }
 
-img {
-  margin: 10px;
-  border-radius: 10px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-video {
-  margin: 10px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px 5%;
+}
+
+.member-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--primary-purple);
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    background: var(--primary-purple);
+    color: white;
 }
