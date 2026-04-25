@@ -54,4 +54,55 @@ body {
     transform: translateY(-5px);
     background: var(--primary-purple);
     color: white;
+
+/* Container for the images */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual photo wrapper */
+.photo-item {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #222;
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.photo-item img {
+  width: 100%; /* Makes image fill the grid square */
+  height: 250px; /* Consistent height */
+  object-fit: cover; /* Crops image perfectly without stretching it */
+  display: block;
+  margin: 0; /* Overriding your previous margin */
+}
+
+/* Hover effect for a "Premium" feel */
+.photo-item:hover {
+  transform: scale(1.02);
+  border-color: #00ffff;
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Styling the back link to look like a button */
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  border: 1px solid #00ffff;
+  border-radius: 50px;
+  color: #00ffff;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  background: #00ffff;
+  color: #111;
+}
+
 }
